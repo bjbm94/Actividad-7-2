@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bibliotecario">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="apellidos" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="lector">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:string" />
+                            <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="apellidos" type="xs:string" />
+                            <xs:element name="teléfono" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+                            <xs:element name="direccion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo_de_calle">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Calle"/>
+                                                    <xs:enumeration value="Avenida"/>
+                                                    <xs:enumeration value="Plaza"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="nombre_calle" type="xs:string" />
+                                        <xs:element name="numero" type="xs:positiveInteger" />
+                                        <xs:element name="piso_y_letra" type="xs:string" />
+                                        <xs:element name="codigo_postal" type="xs:positiveInteger" />
+                                        <xs:element name="localidad" type="xs:string" />
+                                        <xs:element name="provincia" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="prestamo" maxOccurs="3">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fecha">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="inico" type="xs:string" />
+                                        <xs:element name="devolucion" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ejemplar">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="numero_de_registro" type="xs:integer" />
+                                        <xs:element name="titulo" type="xs:string" />
+                                        <xs:element name="autor" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="identificador" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
+    <bibliotecario>
+        <nombre>Juan</nombre>
+        <apellidos>García Ortega</apellidos>
+    </bibliotecario>
+    <lector>
+        <id>78538240W</id><!-- Aquí puse mi DNI por poner algo -->
+        <nombre>Bryan</nombre>
+        <apellidos>Barral Medina</apellidos>
+        <teléfono>690808003</teléfono>
+        <direccion>
+            <tipo_de_calle>Calle</tipo_de_calle>
+            <nombre_calle>Seguidilla</nombre_calle>
+            <numero>18</numero>
+            <piso_y_letra>1A</piso_y_letra>
+            <codigo_postal>35620</codigo_postal>
+            <localidad>Gran Tarajal</localidad>
+            <provincia>Las Palmas</provincia>
+        </direccion>
+    </lector>
+    <prestamo identificador="12b45"><!-- Esto lo represento con números y letras, por inventarme algo -->
+        <fecha>
+            <inico>2021-11-20</inico>
+            <devolucion>2021-12-20</devolucion>
+        </fecha>
+        <ejemplar>
+            <numero_de_registro>12</numero_de_registro><!-- Este lo represento solo con números -->
+            <titulo>Don Quijote de la Mancha</titulo>
+            <autor>miguel de Cervantes</autor>
+        </ejemplar>
+    </prestamo>
+</biblioteca>
